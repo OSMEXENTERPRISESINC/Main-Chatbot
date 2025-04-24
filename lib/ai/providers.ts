@@ -35,3 +35,12 @@ export const myProvider = isTestEnvironment
         'small-model': xai.image('grok-2-image'),
       },
     });
+
+export const providers = {
+  xai: {
+    name: 'XAI',
+    models: ['grok-3-latest'],
+    apiKey: 'xai-XhVtDqnHob0FWaqL4VDk6VXtsu4pbvAjo4PMUHEW6C89K8wi5nCy6hIcpbYeSgX76lvhOXnrr8wFH80A',
+    baseUrl: 'https://api.x.ai/v1',
+  },
+};

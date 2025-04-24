@@ -15,6 +15,15 @@ import { cn } from '@/lib/utils';
 
 import { CheckCircleFillIcon, ChevronDownIcon } from './icons';
 
+const models = [
+  {
+    id: 'grok-3-latest',
+    name: 'Grok 3 (Latest)',
+    provider: 'xai',
+  },
+  // ... existing code ...
+];
+
 export function ModelSelector({
   selectedModelId,
   className,
