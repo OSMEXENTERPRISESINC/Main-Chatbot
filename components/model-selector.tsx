@@ -15,15 +15,6 @@ import { cn } from '@/lib/utils';
 
 import { CheckCircleFillIcon, ChevronDownIcon } from './icons';
 
-const models = [
-  {
-    id: 'grok-3-latest',
-    name: 'Grok 3 (Latest)',
-    provider: 'xai',
-  },
-  // ... existing code ...
-];
-
 export function ModelSelector({
   selectedModelId,
   className,
@@ -59,7 +50,7 @@ export function ModelSelector({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="min-w-[300px]">
         {chatModels.map((chatModel) => {
-          const { id } = chatModel;
+          const { id, provider } = chatModel;
 
           return (
             <DropdownMenuItem
@@ -84,6 +75,11 @@ export function ModelSelector({
                   <div>{chatModel.name}</div>
                   <div className="text-xs text-muted-foreground">
                     {chatModel.description}
+                    {provider && (
+                      <span className="ml-1 text-xs text-muted-foreground">
+                        ({provider})
+                      </span>
+                    )}
                   </div>
                 </div>
 
